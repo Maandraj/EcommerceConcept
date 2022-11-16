@@ -1,4 +1,4 @@
-package com.maandraj.primeshopapp
+package com.maandraj.ecommerceconcept
 
 import org.junit.Test
 

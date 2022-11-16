@@ -38,7 +38,12 @@ dependencies {
     api 'androidx.core:core-ktx:1.7.0'
     api 'androidx.appcompat:appcompat:1.5.1'
     api 'com.google.android.material:material:1.7.0'
+    api  'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
     testApi 'junit:junit:4.13.2'
+
+    //ViewBinding
+    def viewBinding_version = "1.4.7"
+    api("com.github.kirich1409:viewbindingpropertydelegate-noreflection:$viewBinding_version")
 
     //OkHttp
     def okHttp_version = "3.14.9"

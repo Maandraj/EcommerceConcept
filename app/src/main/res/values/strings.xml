@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">PrimeShopApp</string>
+    <string name="app_name">Ecommerce Concept</string>
+    <string name="ecommerce_concept_logo">Ecommerce\nConcept</string>
 </resources>

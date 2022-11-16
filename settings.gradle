@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "PrimeShopApp"
+rootProject.name = "EcommerceConcept"
 include ':app'
 include ':core'
 include ':data'

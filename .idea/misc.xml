@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/PrimeShopApp/app/src/main/res/layout/activity_main.xml" value="0.15520833333333334" />
+        <entry key="..\:/EcommerceConcept/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/EcommerceConcept/app/src/main/res/layout/activity_splash.xml" value="0.33" />
+        <entry key="..\:/PrimeShopApp/app/src/main/res/drawable/orange_circle.xml" value="0.177" />
+        <entry key="..\:/PrimeShopApp/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/PrimeShopApp/app/src/main/res/layout/activity_splash.xml" value="0.16822916666666668" />
+        <entry key="..\:/PrimeShopApp/core/src/main/res/font-v26/mark_pro.xml" value="0.1984375" />
+        <entry key="..\:/PrimeShopApp/core/src/main/res/font/mark_pro.xml" value="0.1984375" />
       </map>
     </option>
   </component>
