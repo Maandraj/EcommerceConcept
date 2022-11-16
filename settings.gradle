@@ -15,3 +15,7 @@ dependencyResolutionManagement {
 rootProject.name = "PrimeShopApp"
 include ':app'
 include ':core'
+include ':data'
+include ':domain'
+include ':models'
+include ':providers'
