@@ -18,6 +18,8 @@ interface IBaseFragment<VM : IBaseViewModel> {
 
     fun onToolbarBackPressed()
 
+    fun initBinding()
+
     fun hideLoading()
     fun showLoading()
 

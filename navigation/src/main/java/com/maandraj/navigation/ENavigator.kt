@@ -8,7 +8,9 @@ class ENavigator(
 ){
     @MainThread
     fun navigatorToFlow(navigationFlow: NavigationFlow) = when(navigationFlow){
-        is NavigationFlow.HostTabFlow -> navController.navigate(MainNavGraphDirections.actionGlobalHostTabFlow())
+        is NavigationFlow.HostTabFlow -> navController.navigate(MainNavGraphDirections.actionGlobalHostTabsFlow())
+
+        is NavigationFlow.ExplorerFlow -> navController.navigate(MainNavGraphDirections.actionGlobalExplorerFlow())
 
         is NavigationFlow.MainFlow -> navController.navigate(MainNavGraphDirections.actionGlobalMainFlow())
 

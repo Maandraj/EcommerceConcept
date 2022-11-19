@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main), ToFlowNavigatabl
     private var navigator: ENavigator? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment

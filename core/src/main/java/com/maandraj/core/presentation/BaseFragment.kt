@@ -78,6 +78,11 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         savedInstanceState: Bundle?,
     ): View? = inflater.inflate(layoutId, container, false)
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initBinding()
+    }
+
     override fun onDestroyView() {
         onBackPressedCallback.isEnabled = false
         viewModel?.apply {

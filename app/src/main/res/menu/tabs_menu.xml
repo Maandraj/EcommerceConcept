@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@id/main_flow"
+        android:id="@id/explorer_flow"
         android:title="Explorer"
         android:icon="@drawable/ic_explorer_24dp" />
     <item
