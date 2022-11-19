@@ -8,4 +8,7 @@ interface ConvertibleTo<out T> : Convertible {
     @Suppress("UNCHECKED_CAST")
     override fun <I : Any> convertAs(clazz: KClass<I>): I? = convertTo() as? I
 }
+inline fun <reified To : Any> Convertible.convert(): To? {
+    return convertAs(To::class)
+}
 

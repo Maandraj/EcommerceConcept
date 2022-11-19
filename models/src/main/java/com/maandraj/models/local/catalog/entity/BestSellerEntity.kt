@@ -8,7 +8,7 @@ import com.maandraj.models.ui.catalog.BestSellerData
 @Entity
 data class BestSellerEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Int = 0,
     val discountPrice: Int,
     val isFavorites: Boolean,
     val picture: String,

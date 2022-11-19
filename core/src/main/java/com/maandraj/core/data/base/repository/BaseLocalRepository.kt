@@ -1,4 +1,7 @@
 package com.maandraj.core.data.base.repository
 
-interface BaseLocalRepository {
+import com.maandraj.core.data.base.source.LocalDataSource
+
+interface BaseLocalRepository<out L : LocalDataSource> {
+    val localDataSource : L
 }

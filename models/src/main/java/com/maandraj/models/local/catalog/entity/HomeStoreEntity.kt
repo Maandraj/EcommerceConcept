@@ -8,7 +8,7 @@ import com.maandraj.models.ui.catalog.HomeStoreData
 @Entity
 data class HomeStoreEntity(
     @PrimaryKey
-    val id: Int,
+    val id: Int = 0,
     val isBuy: Boolean,
     val isNew: Boolean,
     val picture: String,
