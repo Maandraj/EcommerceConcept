@@ -17,11 +17,6 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
 
     override val viewModel: VM? = null
 
-    //Toolbar
-    override val toolbarTitle: String = ""
-    override val toolbarTitleResId: Int? = null
-    override val gravityToolbarTitle: Int = Gravity.CENTER
-
     override val navController: NavController
         get() = this.findNavController()
 
@@ -30,21 +25,10 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
     open val loadingViewLayout: View?
         get() = this.view?.findViewById(R.id.loadingLayout)
 
-    protected open val toolbarView: Toolbar?
-        get() = this.view?.findViewById(R.id.toolbarLayout)
-    protected open val toolbarBackButtonResId: Int
-        get() = R.drawable.back_button_37dp
-
-    protected open val needBackButton: Boolean = false
     protected open val canPressBack: Boolean = false
-
 
     override fun onBackPressed(): Boolean {
         return if (!canPressBack) true else navController.popBackStack()
-    }
-
-    override fun onToolbarBackPressed() {
-        navController.popBackStack()
     }
 
     override fun showToast(message: Any, interval: Int) {
@@ -90,29 +74,6 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
             errorLiveData.removeObservers(viewLifecycleOwner)
         }
         super.onDestroyView()
-    }
-
-    protected open fun showToolbar() {
-        toolbarView?.let { toolbar ->
-            val titleMarginEnd =
-                dimenPixel(if (needBackButton) R.dimen.size_margin_toolbar_back_button_dp
-                else R.dimen.size_dimen_toolbar_dp)
-            initToolbarTitle(toolbar, titleMarginEnd)
-            if (needBackButton) {
-                toolbar.setNavigationIcon(toolbarBackButtonResId)
-                toolbar.setNavigationOnClickListener {
-                    onToolbarBackPressed()
-                }
-            }
-        }
-        if (canPressBack) {
-            onBackPressedCallback.isEnabled = true
-            this.requireActivity()
-                .onBackPressedDispatcher
-                .addCallback(viewLifecycleOwner, onBackPressedCallback)
-        } else {
-            onBackPressedCallback.isEnabled = false
-        }
     }
 
     protected open val onBackPressedCallback by lazy() {

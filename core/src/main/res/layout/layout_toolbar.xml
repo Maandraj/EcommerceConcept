@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/toolbarLayout"
+    android:id="@+id/toolbar_layout"
     android:layout_width="match_parent"
-    android:layout_height="?attr/actionBarSize"
-    app:layout_scrollFlags="scroll|enterAlways|snap"
-    tools:layout_height="56dp">
+    android:layout_height="56dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_toolbar_back"
+        android:layout_width="37dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="@dimen/size_margin_toolbar_back_button_dp"
+        android:background="@drawable/back_button_37dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/toolbarTitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:focusable="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:scrollHorizontally="true"
-            android:gravity="center_vertical|center_horizontal"
-            android:maxLines="1"
-            android:textSize="16sp"
-            android:visibility="visible"
-            tools:text="Toolbar Title" />
+    <TextView
+        android:id="@+id/tv_toolbar_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="16sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Toolbar Title" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-</androidx.appcompat.widget.Toolbar>

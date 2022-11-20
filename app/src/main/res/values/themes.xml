@@ -14,7 +14,6 @@
         <item name="colorOnBackground">#212121</item>
         <item name="android:statusBarColor">#464646</item>
         <item name="android:textViewStyle">@style/TextTitleStyle</item>
-        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
 
     </style>
 

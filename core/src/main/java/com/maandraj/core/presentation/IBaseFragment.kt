@@ -10,13 +10,7 @@ interface IBaseFragment<VM : IBaseViewModel> {
     val viewModel: VM?
     val layoutId: Int
 
-    val toolbarTitle: String
-    val toolbarTitleResId: Int?
-    val gravityToolbarTitle: Int
-
     fun onBackPressed(): Boolean
-
-    fun onToolbarBackPressed()
 
     fun initBinding()
 

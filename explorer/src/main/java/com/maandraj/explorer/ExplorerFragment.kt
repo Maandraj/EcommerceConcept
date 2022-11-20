@@ -6,12 +6,13 @@ import com.maandraj.core.presentation.BaseFragment
 import com.maandraj.explorer.databinding.FragmentExplorerBinding
 
 
-class ExplorerFragment : BaseFragment<MainViewModel>() {
+class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
 
     private val binding: FragmentExplorerBinding by viewBinding(FragmentExplorerBinding::bind)
-    override val viewModel: MainViewModel? by viewModels()
+    override val viewModel: ExplorerViewModel by viewModels()
     override val layoutId: Int
         get() = R.layout.fragment_explorer
+
 
     override fun initBinding() {
         with(binding) {
