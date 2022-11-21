@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_category_button_select_background">@color/color_main</color>
+    <color name="item_category_button_unselect_background">#FFFFFF</color>
+    <color name="item_category_icon_select_tint">#FFFFFF</color>
+    <color name="item_category_icon_unselect_tint">#B3B3C3</color>
+    <color name="item_category_name_select_color">@color/color_main</color>
+    <color name="item_category_name_unselect_color">@color/text_main_color</color>
+</resources>

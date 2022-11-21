@@ -5,6 +5,6 @@
     app:startDestination="@id/explorerFragment">
     <fragment
         android:id="@+id/explorerFragment"
-        android:name="com.maandraj.explorer.ExplorerFragment"
+        android:name="com.maandraj.explorer.presentation.ExplorerFragment"
         android:label="ExplorerFragment" />
 </navigation>

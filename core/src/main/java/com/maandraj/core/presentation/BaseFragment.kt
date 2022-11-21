@@ -1,12 +1,10 @@
 package com.maandraj.core.presentation
 
 import android.os.Bundle
-import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -23,7 +21,7 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
     open val contentViewLayout: View? = null
 
     open val loadingViewLayout: View?
-        get() = this.view?.findViewById(R.id.loadingLayout)
+        get() = this.view?.findViewById(R.id.loading_layout)
 
     protected open val canPressBack: Boolean = false
 

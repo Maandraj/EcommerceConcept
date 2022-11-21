@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_phone_name">Смартфоны</string>
+    <string name="item_pc_name">Компьтеры</string>
+    <string name="item_health_name">Здоровье</string>
+    <string name="item_books_name">Книги</string>
+    <string name="item_tools_name">Инструменты</string>
+</resources>

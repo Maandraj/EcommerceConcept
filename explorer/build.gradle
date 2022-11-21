@@ -35,4 +35,6 @@ android {
 
 dependencies {
     implementation(project(":domain"))
+
+    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapter_delegate_version"
 }

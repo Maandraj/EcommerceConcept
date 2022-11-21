@@ -1,6 +1,7 @@
 buildscript {
     ext {
         nav_version = "2.5.3"
+        adapter_delegate_version = "4.3.2"
     }
     dependencies {
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
