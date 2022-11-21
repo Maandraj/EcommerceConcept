@@ -38,8 +38,7 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
 
     private fun setSearchBox() {
         with(binding) {
-            tilSearch.setStartIconTintList(ContextCompat.getColorStateList(requireContext(),
-                com.maandraj.core.R.color.color_main))
+
         }
 
     }

@@ -2,6 +2,7 @@
 <resources>
     <color name="color_main">#FF6E4E</color>
     <color name="color_second">#010035</color>
+    <color name="color_window_background">#F3F3F3</color>
     <color name="text_main_color">#000000</color>
     <color name="button_back_background">@color/color_second</color>
     <color name="second_element_color">#FFFFFF</color>

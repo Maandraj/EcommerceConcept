@@ -5,4 +5,7 @@
     <string name="item_health_name">Health</string>
     <string name="item_books_name">Books</string>
     <string name="item_tools_name">Tools</string>
+    <string name="search_text_box">Search</string>
+    <string name="explorer_category_title_text">Select category</string>
+    <string name="view_all_text">view all</string>
 </resources>

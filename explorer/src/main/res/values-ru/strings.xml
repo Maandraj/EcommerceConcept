@@ -5,4 +5,6 @@
     <string name="item_health_name">Здоровье</string>
     <string name="item_books_name">Книги</string>
     <string name="item_tools_name">Инструменты</string>
+
+    <string name="search_text_box">Поиск</string>
 </resources>

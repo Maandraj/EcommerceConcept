@@ -33,6 +33,8 @@
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_pc.xml" value="0.178" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_phone.xml" value="0.2685" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_tools.xml" value="0.178" />
+        <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_qr_code_16dp.xml" value="0.2685" />
+        <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/search_box_background.xml" value="0.177" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/layout/fragment_explorer.xml" value="0.25" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/layout/item_category.xml" value="0.75" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/layout/layout_explorer_toolbar.xml" value="0.22" />
