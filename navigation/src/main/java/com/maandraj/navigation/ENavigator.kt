@@ -2,8 +2,9 @@ package com.maandraj.navigation
 
 import androidx.annotation.MainThread
 import androidx.navigation.NavController
+import javax.inject.Inject
 
-class ENavigator(
+class ENavigator @Inject constructor(
     private val navController: NavController
 ){
     @MainThread

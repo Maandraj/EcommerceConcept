@@ -1,6 +1,7 @@
 package com.maandraj.models.ui.catalog
 
 import com.maandraj.core.data.base.convertible.ConvertibleTo
+import com.maandraj.core.utils.adapter.DisplayableItem
 import com.maandraj.models.local.catalog.entity.BestSellerEntity
 
 data class BestSellerData(
@@ -9,7 +10,7 @@ data class BestSellerData(
     val picture: String,
     val priceWithoutDiscount: Int,
     val title: String
-): ConvertibleTo<BestSellerEntity> {
+): ConvertibleTo<BestSellerEntity>, DisplayableItem {
     override fun convertTo(): BestSellerEntity = BestSellerEntity(
         discountPrice = discountPrice,
         isFavorites = isFavorites,

@@ -1,15 +1,16 @@
-package com.maandraj.explorer.presentation.adapter
+package com.maandraj.explorer.presentation.adapter.category
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
 import com.maandraj.explorer.R
+import com.maandraj.core.utils.adapter.DisplayableItem
 
 data class CategoryData(
     @DrawableRes
     val iconResId: Int,
     @StringRes
     val nameResId: Int,
-) : DisplayableItem{
+) : DisplayableItem {
     companion object {
         fun createListExample() : List<CategoryData> = listOf(
             CategoryData(iconResId = R.drawable.ic_item_phone, R.string.item_phone_name),

@@ -1,5 +1,8 @@
-package com.maandraj.provides.source.network
+package com.maandraj.ecommerceconcept.di.module
 
+import com.maandraj.data.catalog.source.remote.catalog.CatalogRemoteDataSource
+import com.maandraj.data.catalog.source.remote.catalog.CatalogRemoteDataSourceImpl
+import com.maandraj.provides.source.network.api.CatalogApi
 import com.squareup.moshi.Moshi
 import dagger.Module
 import dagger.Provides

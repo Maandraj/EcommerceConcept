@@ -5,7 +5,7 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.maandraj.core.presentation.BaseFragment
-import com.maandraj.core.utils.dimen
+import com.maandraj.core.utils.extension.dimen
 import com.maandraj.ecommerceconcept.R
 import com.maandraj.ecommerceconcept.databinding.FragmentHostTabsBinding
 

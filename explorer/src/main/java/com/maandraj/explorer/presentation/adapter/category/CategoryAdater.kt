@@ -1,9 +1,10 @@
-package com.maandraj.explorer.presentation.adapter
+package com.maandraj.explorer.presentation.adapter.category
 
 import androidx.core.content.ContextCompat
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import com.maandraj.explorer.R
 import com.maandraj.explorer.databinding.ItemCategoryBinding
+import com.maandraj.core.utils.adapter.DisplayableItem
 
 private var currentSelectedPosition: Int = 0
 

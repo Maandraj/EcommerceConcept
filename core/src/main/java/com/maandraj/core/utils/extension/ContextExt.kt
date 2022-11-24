@@ -1,4 +1,4 @@
-package com.maandraj.core.utils
+package com.maandraj.core.utils.extension
 
 import android.content.Context
 import android.widget.Toast

@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.maandraj.core.R
-import com.maandraj.core.utils.*
+import com.maandraj.core.utils.extension.hide
+import com.maandraj.core.utils.extension.hideKeyboard
+import com.maandraj.core.utils.extension.show
+import com.maandraj.core.utils.extension.toast
 
 abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM> {
 
@@ -22,6 +25,9 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
 
     open val loadingViewLayout: View?
         get() = this.view?.findViewById(R.id.loading_layout)
+
+    open val errorViewLayout: View?
+        get() = this.view?.findViewById(R.id.error_layout)
 
     protected open val canPressBack: Boolean = false
 
@@ -54,6 +60,8 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         contentViewLayout?.show()
     }
 
+    override fun initBinding() = Unit
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -64,6 +72,7 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         super.onViewCreated(view, savedInstanceState)
         initBinding()
     }
+
 
     override fun onDestroyView() {
         onBackPressedCallback.isEnabled = false

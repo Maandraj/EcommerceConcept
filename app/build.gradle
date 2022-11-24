@@ -42,5 +42,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     implementation(project(':domain'))
-    implementation implementation(project(':explorer',))
+    implementation (project(':explorer'))
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
 }

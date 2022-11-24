@@ -31,6 +31,9 @@ android {
 }
 
 dependencies {
+
     api(project(':models'))
-    api(project(':navigation'))
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
 }

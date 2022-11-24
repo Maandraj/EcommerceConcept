@@ -7,17 +7,22 @@ import com.maandraj.ecommerceconcept.R
 import com.maandraj.navigation.ENavigator
 import com.maandraj.navigation.NavigationFlow
 import com.maandraj.navigation.ToFlowNavigatable
+import com.maandraj.provides.utils.InjectUtils
 
 class MainActivity : AppCompatActivity(R.layout.activity_main), ToFlowNavigatable {
+
+
     private var navigator: ENavigator? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
-
         val navController = navHostFragment.navController
+
         navigator = ENavigator(navController)
+
     }
 
     override fun navigateToFlow(flow: NavigationFlow) {

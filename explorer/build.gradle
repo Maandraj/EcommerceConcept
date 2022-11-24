@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -36,5 +37,13 @@ android {
 dependencies {
     implementation(project(":domain"))
 
+    //AdapterDelegatesViewBinding
     implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapter_delegate_version"
+
+    //SwipeRefreshLayout
+    def swipe_refresh_layout = "1.1.0"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:$swipe_refresh_layout"
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+
 }
