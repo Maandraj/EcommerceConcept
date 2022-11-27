@@ -1,4 +1,4 @@
-package com.maandraj.data.catalog.source.local.catalog
+package com.maandraj.data.catalog.local.source
 
 import com.maandraj.core.data.base.source.LocalDataSource
 import com.maandraj.models.local.catalog.entity.CatalogEntity

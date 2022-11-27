@@ -3,6 +3,8 @@ buildscript {
         nav_version = "2.5.3"
         adapter_delegate_version = "4.3.2"
         dagger_version = '2.42'
+        room_version = "2.4.3"
+        moshi_version = "1.13.0"
     }
     dependencies {
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"

@@ -2,6 +2,7 @@ package com.maandraj.explorer.di
 
 import androidx.annotation.RestrictTo
 import com.maandraj.data.catalog.repository.CatalogRepository
+import com.maandraj.domain.catalog.usecase.CatalogUseCase
 import com.maandraj.explorer.presentation.ExplorerFragment
 import dagger.Component
 import javax.inject.Scope
@@ -22,7 +23,7 @@ interface ExplorerComponent {
 }
 
 interface ExplorerDeps {
-    val catalogRepository: CatalogRepository
+    val catalogUseCase: CatalogUseCase
 }
 
 interface ExplorerDepsProvider {

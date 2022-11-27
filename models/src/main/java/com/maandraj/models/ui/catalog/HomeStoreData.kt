@@ -17,4 +17,15 @@ data class HomeStoreData(
         subtitle = subtitle,
         title = title
     )
+
+    companion object {
+        fun createEmpty() =
+            HomeStoreData(isBuy = false,
+                isNew = false,
+                picture = "",
+                subtitle = "",
+                title = ""
+            )
+
+    }
 }

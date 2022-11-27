@@ -8,7 +8,7 @@ data class CatalogData(
     val homeStoreData: List<HomeStoreData>,
 ) : ConvertibleTo<CatalogEntity> {
     override fun convertTo(): CatalogEntity = CatalogEntity(
-        bestSeller = bestSellerData.map { it.convertTo() },
-        homeStore = homeStoreData.map { it.convertTo() }
+        bestSellerEntity = bestSellerData.map { it.convertTo() },
+        homeStoreEntity = homeStoreData.map { it.convertTo() }
     )
 }

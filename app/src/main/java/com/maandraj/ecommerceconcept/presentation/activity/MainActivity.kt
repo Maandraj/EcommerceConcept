@@ -7,7 +7,6 @@ import com.maandraj.ecommerceconcept.R
 import com.maandraj.navigation.ENavigator
 import com.maandraj.navigation.NavigationFlow
 import com.maandraj.navigation.ToFlowNavigatable
-import com.maandraj.provides.utils.InjectUtils
 
 class MainActivity : AppCompatActivity(R.layout.activity_main), ToFlowNavigatable {
 

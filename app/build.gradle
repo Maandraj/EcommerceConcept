@@ -45,5 +45,7 @@ dependencies {
     implementation (project(':explorer'))
 
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt("androidx.room:room-compiler:$room_version")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:$moshi_version")
 
 }

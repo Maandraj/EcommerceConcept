@@ -15,6 +15,7 @@ data class BestSellerEntity(
     val priceWithoutDiscount: Int,
     val title: String,
 ) : ConvertibleTo<BestSellerData> {
+
     override fun convertTo(): BestSellerData = BestSellerData(
         discountPrice = discountPrice,
         isFavorites = isFavorites,

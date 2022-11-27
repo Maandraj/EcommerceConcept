@@ -15,6 +15,7 @@ data class HomeStoreEntity(
     val subtitle: String,
     val title: String
 ) : ConvertibleTo<HomeStoreData> {
+
     override fun convertTo(): HomeStoreData = HomeStoreData(
         isBuy = isBuy,
         isNew = isNew,

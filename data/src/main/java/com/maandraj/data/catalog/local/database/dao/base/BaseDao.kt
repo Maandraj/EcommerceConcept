@@ -1,4 +1,4 @@
-package com.maandraj.provides.source.database.dao.base
+package com.maandraj.data.catalog.local.database.dao.base
 
 import androidx.room.Delete
 import androidx.room.Insert

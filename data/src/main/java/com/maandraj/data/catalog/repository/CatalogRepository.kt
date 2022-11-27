@@ -2,8 +2,8 @@ package com.maandraj.data.catalog.repository
 
 import com.maandraj.core.data.base.repository.BaseRepository
 import com.maandraj.core.utils.result.EResult
-import com.maandraj.data.catalog.source.local.catalog.CatalogLocalDataSource
-import com.maandraj.data.catalog.source.remote.catalog.CatalogRemoteDataSource
+import com.maandraj.data.catalog.local.source.CatalogLocalDataSource
+import com.maandraj.data.catalog.remote.source.CatalogRemoteDataSource
 import com.maandraj.models.ui.catalog.CatalogData
 
 interface CatalogRepository : BaseRepository<CatalogRemoteDataSource, CatalogLocalDataSource> {

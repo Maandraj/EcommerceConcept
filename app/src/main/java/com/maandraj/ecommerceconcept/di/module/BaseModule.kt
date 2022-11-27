@@ -1,13 +1,21 @@
 package com.maandraj.ecommerceconcept.di.module
 
-import com.maandraj.ecommerceconcept.di.module.catalog.source.LocalCatalogModule
-import com.maandraj.ecommerceconcept.di.module.catalog.source.RemoteCatalogModule
+import android.app.Application
+import android.content.Context
+import com.maandraj.ecommerceconcept.App
+import com.maandraj.ecommerceconcept.di.module.catalog.CatalogModule
+import dagger.Binds
 import dagger.Module
+import dagger.Provides
+import javax.inject.Singleton
+
 
 @Module(includes = [
     LocalModule::class,
     NetworkModule::class,
-    LocalCatalogModule::class,
-    RemoteCatalogModule::class,
+    CatalogModule::class
 ])
-class BaseModule
+ class BaseModule() {
+
+
+}

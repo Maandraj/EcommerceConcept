@@ -1,4 +1,4 @@
-package com.maandraj.data.catalog.source.remote.catalog
+package com.maandraj.data.catalog.remote.source
 
 import com.maandraj.core.data.base.source.RemoteDataSource
 import com.maandraj.core.utils.result.EResult

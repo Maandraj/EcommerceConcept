@@ -1,10 +1,10 @@
-package com.maandraj.data.catalog.source.local.catalog
+package com.maandraj.data.catalog.local.source
 
 import com.maandraj.models.local.catalog.entity.CatalogEntity
-import com.maandraj.provides.source.database.dao.catalog.CatalogDao
+import com.maandraj.data.catalog.local.database.dao.catalog.CatalogDao
 import javax.inject.Inject
 
-class CatalogLocalDataSourceImpl @Inject constructor(
+class CatalogLocalDataSourceImpl (
     private val catalogDao: CatalogDao,
 ) : CatalogLocalDataSource {
 

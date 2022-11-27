@@ -1,20 +1,22 @@
 package com.maandraj.ecommerceconcept.di.module
 
-import com.maandraj.data.catalog.source.remote.catalog.CatalogRemoteDataSource
-import com.maandraj.data.catalog.source.remote.catalog.CatalogRemoteDataSourceImpl
-import com.maandraj.provides.source.network.api.CatalogApi
-import com.squareup.moshi.Moshi
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 @Module
 class NetworkModule {
+
+    @Singleton
+    @Provides
+    fun provideGson(): Gson = Gson().newBuilder().create()
+
 
     @Provides
     @Singleton
@@ -35,14 +37,15 @@ class NetworkModule {
 
     @Provides
     @Singleton
-    fun provideRetrofit(okHttpClient: OkHttpClient, moshi: Moshi): Retrofit =
+    fun provideRetrofit(okHttpClient: OkHttpClient, gson: Gson): Retrofit =
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(okHttpClient)
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
+            .addConverterFactory(GsonConverterFactory.create(gson))
             .build()
 
 }
+
 private const val BASE_URL = "https://run.mocky.io/"
 private const val CONNECT_TIMEOUT = 60L
 private const val READ_TIMEOUT = 60L

@@ -11,11 +11,16 @@ fun emptyResult() = EResult.Empty
 
 inline fun <reified T : Any> successResult(data: T): EResult<T> = EResult.Success(data)
 
+fun Any.errorResult(
+    message: String = "",
+    code: Int = -1,
+    exception: Throwable? = null
+) = EResult.Failure(message, exception)
+
 inline fun <reified T : Any> T?.toSuccessResult(): EResult<T> =
     this?.let {
         successResult(it)
     } ?: emptyResult()
-
 
 @Suppress("REDUNDANT_INLINE_SUSPEND_FUNCTION_TYPE")
 suspend inline fun <reified I : Any> EResult<I>.applyIfSuccessSuspend(crossinline block: SInHandler<I>): EResult<I> {

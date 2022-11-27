@@ -32,5 +32,6 @@ android {
 }
 
 dependencies {
-    api(project(':providers'))
+    api(project(':models'))
+    kapt("androidx.room:room-compiler:$room_version")
 }

@@ -44,7 +44,7 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         showLayoutLoading()
     }
 
-    protected fun showLayoutLoading() {
+    private fun showLayoutLoading() {
         hideKeyboard()
         contentViewLayout?.hide()
         loadingViewLayout?.show()
@@ -54,7 +54,7 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         hideLayoutLoading()
     }
 
-    protected fun hideLayoutLoading() {
+    private fun hideLayoutLoading() {
         hideKeyboard()
         loadingViewLayout?.hide()
         contentViewLayout?.show()
