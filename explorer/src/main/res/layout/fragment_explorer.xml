@@ -88,8 +88,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/et_search" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_hot_seles"
+     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_home_store"
         android:layout_width="match_parent"
         android:layout_marginTop="16dp"
         android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_search"
-        tools:listitem="@layout/item_hot_sales" />
+        tools:listitem="@layout/item_home_store" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/frameLayout"

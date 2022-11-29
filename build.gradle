@@ -5,6 +5,7 @@ buildscript {
         dagger_version = '2.42'
         room_version = "2.4.3"
         moshi_version = "1.13.0"
+        glide_version = "4.14.2"
     }
     dependencies {
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"

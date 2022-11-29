@@ -12,7 +12,6 @@ import com.maandraj.domain.catalog.usecase.CatalogUseCase
 import com.maandraj.explorer.di.DaggerExplorerComponent
 import com.maandraj.explorer.di.ExplorerComponent
 import com.maandraj.explorer.di.ExplorerDepsProvider
-import com.maandraj.models.remote.catalog.CatalogModel
 import com.maandraj.models.ui.catalog.CatalogData
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -22,7 +21,7 @@ class ExplorerViewModel @Inject constructor(
     private val catalogUseCase: CatalogUseCase,
 ) : BaseViewModel() {
 
-    private val _catalog = MutableLiveData<CatalogModel>()
+    private val _catalog = MutableLiveData<CatalogData>()
     val catalog = _catalog.asLiveData()
 
     fun getCatalog() = viewModelScope.launch {

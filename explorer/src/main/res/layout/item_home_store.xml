@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="182dp">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
+        android:layout_height="match_parent">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_image_sale"
-            app:shapeAppearanceOverlay="@style/rounded10dpImageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="2dp"
             android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/rounded10dpImageView"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -37,45 +39,48 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="26dp"
+            android:layout_marginBottom="26dp"
             android:textColor="@color/hot_sales_text_color"
             android:textSize="12sp"
-            android:layout_marginBottom="26dp"
-            app:layout_constraintBottom_toTopOf="@+id/cv_btn_sale"
+            app:layout_constraintBottom_toTopOf="@+id/btn_buy_sale"
             app:layout_constraintStart_toStartOf="parent"
             tools:text="Desc" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_btn_sale"
-            android:layout_width="wrap_content"
-            android:layout_height="24dp"
-            android:layout_marginBottom="26dp"
-            app:cornerRadius="6dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/tv_title_sale">
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_buy_sale"
-                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/buy_now_text_sale"
-                android:textColor="@color/hot_sales_button_text_color"
-                android:textSize="12sp" />
-        </androidx.cardview.widget.CardView>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_new_sale"
-            android:layout_width="27dp"
-            android:layout_height="27dp"
+            android:id="@+id/btn_buy_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#ffffff"
+            android:text="@string/buy_now_text_sale"
+            android:textColor="@color/hot_sales_button_text_color"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_title_sale" />
+
+        <FrameLayout
+            android:id="@+id/layout_new_sale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="14dp"
-            android:backgroundTint="#FFFFFF"
-            android:insetLeft="0dp"
-            android:insetTop="0dp"
-            android:insetRight="0dp"
-            android:insetBottom="0dp"
-            app:cornerRadius="50dp"
-            android:text="NEW"
+            android:layout_marginBottom="18dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/new_text_background"
+            app:layout_constraintBottom_toTopOf="@+id/tv_title_sale"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginHorizontal="3dp"
+                android:layout_marginVertical="3dp"
+                android:gravity="center"
+                android:text="New"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp" />
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

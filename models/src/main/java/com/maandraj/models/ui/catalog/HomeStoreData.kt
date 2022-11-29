@@ -1,6 +1,7 @@
 package com.maandraj.models.ui.catalog
 
 import com.maandraj.core.data.base.convertible.ConvertibleTo
+import com.maandraj.core.utils.adapter.DisplayableItem
 import com.maandraj.models.local.catalog.entity.HomeStoreEntity
 
 data class HomeStoreData(
@@ -9,7 +10,7 @@ data class HomeStoreData(
     val picture: String,
     val subtitle: String,
     val title: String,
-) : ConvertibleTo<HomeStoreEntity> {
+) : ConvertibleTo<HomeStoreEntity>, DisplayableItem {
     override fun convertTo(): HomeStoreEntity = HomeStoreEntity(
         isBuy = isBuy,
         isNew = isNew,
@@ -17,15 +18,4 @@ data class HomeStoreData(
         subtitle = subtitle,
         title = title
     )
-
-    companion object {
-        fun createEmpty() =
-            HomeStoreData(isBuy = false,
-                isNew = false,
-                picture = "",
-                subtitle = "",
-                title = ""
-            )
-
-    }
 }

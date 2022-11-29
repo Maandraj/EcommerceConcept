@@ -17,32 +17,35 @@ fun categoryAdapterDelegate(
 
     }
 ) {
-    binding.btnCategory.setOnClickListener {
-        binding.btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
-            com.maandraj.core.R.color.color_main)
-        this.bindingAdapter?.notifyItemChanged(currentSelectedPosition)
-        currentSelectedPosition = absoluteAdapterPosition
-        this.bindingAdapter?.notifyItemChanged(currentSelectedPosition)
-        val scrollPosition: Int = absoluteAdapterPosition - 1
-        itemClickedListener(item, scrollPosition)
-    }
-    bind {
-        if (absoluteAdapterPosition == currentSelectedPosition) {
-            binding.btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
-                R.color.item_category_button_select_background)
-            binding.btnCategory.iconTint = ContextCompat.getColorStateList(context,
-                R.color.item_category_icon_select_tint)
-            binding.tvNameCategory.setTextColor(
-                ContextCompat.getColor(context, R.color.item_category_name_select_color))
-        } else {
-            binding.btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
-                R.color.item_category_button_unselect_background)
-            binding.btnCategory.iconTint = ContextCompat.getColorStateList(context,
-                R.color.item_category_icon_unselect_tint)
-            binding.tvNameCategory.setTextColor(
-                ContextCompat.getColor(context, R.color.item_category_name_unselect_color))
+    with(binding){
+        btnCategory.setOnClickListener {
+            btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
+                com.maandraj.core.R.color.color_main)
+            this@adapterDelegateViewBinding.bindingAdapter?.notifyItemChanged(currentSelectedPosition)
+            currentSelectedPosition = absoluteAdapterPosition
+            this@adapterDelegateViewBinding.bindingAdapter?.notifyItemChanged(currentSelectedPosition)
+            val scrollPosition: Int = absoluteAdapterPosition - 1
+            itemClickedListener(item, scrollPosition)
         }
-        binding.tvNameCategory.text = getString(item.nameResId)
-        binding.btnCategory.icon = getDrawable(item.iconResId)
+        bind {
+            if (absoluteAdapterPosition == currentSelectedPosition) {
+                btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
+                    R.color.item_category_button_select_background)
+                btnCategory.iconTint = ContextCompat.getColorStateList(context,
+                    R.color.item_category_icon_select_tint)
+                tvNameCategory.setTextColor(
+                    ContextCompat.getColor(context, R.color.item_category_name_select_color))
+            } else {
+                btnCategory.backgroundTintList = ContextCompat.getColorStateList(context,
+                    R.color.item_category_button_unselect_background)
+                btnCategory.iconTint = ContextCompat.getColorStateList(context,
+                    R.color.item_category_icon_unselect_tint)
+                tvNameCategory.setTextColor(
+                    ContextCompat.getColor(context, R.color.item_category_name_unselect_color))
+            }
+            tvNameCategory.text = getString(item.nameResId)
+            btnCategory.icon = getDrawable(item.iconResId)
+        }
     }
+
 }
