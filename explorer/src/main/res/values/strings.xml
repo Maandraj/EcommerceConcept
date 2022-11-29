@@ -7,6 +7,8 @@
     <string name="item_tools_name">Tools</string>
     <string name="search_text_box">Search</string>
     <string name="explorer_category_title_text">Select category</string>
+    <string name="explorer_hot_sales_title_text">Hot sales</string>
     <string name="view_all_text">view all</string>
+    <string name="see_more_text">see more</string>
     <string name="buy_now_text_sale">Buy now!</string>
 </resources>

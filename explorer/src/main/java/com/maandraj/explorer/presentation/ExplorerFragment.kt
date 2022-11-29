@@ -46,14 +46,14 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
         }
     private val adapterCategory = ListDelegationAdapter(
         categoryAdapterDelegate { item, positionScroll ->
-            toast(item.toString())
+            toast(getString(item.nameResId))
             (binding.rvCategories.layoutManager as? LinearLayoutManager)?.scrollToPositionWithOffset(
                 positionScroll, SCROLL_OFFSET)
         }
     )
     private val adapterHome = ListDelegationAdapter(
         homeStoreAdapterDelegate { item ->
-            toast(item.toString())
+            toast(item.title)
         }
     )
 
