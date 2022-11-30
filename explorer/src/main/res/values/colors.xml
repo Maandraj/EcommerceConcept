@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="item_category_button_select_background">@color/color_main</color>
+    <color name="item_category_button_unselect_background">#FFFFFF</color>
+    <color name="item_category_icon_select_tint">#FFFFFF</color>
+    <color name="item_category_icon_unselect_tint">#B3B3C3</color>
+    <color name="item_category_name_select_color">@color/color_main</color>
+    <color name="item_category_name_unselect_color">@color/color_second</color>
+    
+    <color name="hot_sales_text_color">#FFFFFF</color>
+    <color name="hot_sales_button_color">#FFFFFF</color>
+    <color name="hot_sales_button_text_color">@color/color_second</color>
+</resources>

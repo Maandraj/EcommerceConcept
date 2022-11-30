@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/explorer_flow"
+        android:title="Explorer"
+        android:icon="@drawable/ic_explorer_24dp" />
+    <item
+        android:id="@null"
+        android:title="Cart"
+        android:icon="@drawable/ic_cart_24dp" />
+    <item
+        android:id="@null"
+        android:title="Favorite"
+        android:icon="@drawable/ic_favoriter_24dp" />
+    <item
+        android:id="@null"
+        android:title="Account"
+        android:icon="@drawable/ic_account_24dp" />
+</menu>

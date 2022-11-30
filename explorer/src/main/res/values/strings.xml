@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_phone_name">Phone</string>
+    <string name="item_pc_name">Computer</string>
+    <string name="item_health_name">Health</string>
+    <string name="item_books_name">Books</string>
+    <string name="item_tools_name">Tools</string>
+    <string name="search_text_box">Search</string>
+    <string name="explorer_category_title_text">Select category</string>
+    <string name="explorer_hot_sales_title_text">Hot sales</string>
+    <string name="view_all_text">view all</string>
+    <string name="see_more_text">see more</string>
+    <string name="buy_now_text_sale">Buy now!</string>
+</resources>

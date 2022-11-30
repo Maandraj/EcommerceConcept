@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_margin_toolbar_back_button_dp">42dp</dimen>
+    <dimen name="size_dimen_toolbar_dp">16dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <dimen name="base_margin">16dp</dimen>
+    <dimen name="base_start_margin">16dp</dimen>
+    <dimen name="base_end_margin">16dp</dimen>
+
+    <dimen name="corner_radius_buttons">10dp</dimen>
+</resources>
