@@ -37,6 +37,11 @@
         <entry key="..\:/EcommerceConcept/core/src/main/res/layout/layout_loading.xml" value="0.67" />
         <entry key="..\:/EcommerceConcept/core/src/main/res/layout/layout_toolbar.xml" value="0.25" />
         <entry key="..\:/EcommerceConcept/core/src/main/res/layout/loading_layout.xml" value="0.22" />
+        <entry key="..\:/EcommerceConcept/details_product/src/main/res/layout/fragment_detail_product.xml" value="0.22" />
+        <entry key="..\:/EcommerceConcept/details_product/src/main/res/layout/ic_favourite_details_11dp.xml" value="0.16927083333333334" />
+        <entry key="..\:/EcommerceConcept/details_product/src/main/res/layout/layout_cart_button.xml" value="0.16822916666666668" />
+        <entry key="..\:/EcommerceConcept/details_product/src/main/res/layout/layout_details_toolbar.xml" value="0.25" />
+        <entry key="..\:/EcommerceConcept/details_product/src/main/res/layout/layout_favourite_button.xml" value="0.16927083333333334" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_books.xml" value="0.178" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_health.xml" value="0.178" />
         <entry key="..\:/EcommerceConcept/explorer/src/main/res/drawable/ic_item_pc.xml" value="0.178" />
