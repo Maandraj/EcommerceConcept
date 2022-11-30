@@ -13,11 +13,16 @@ class CatalogRemoteDataSourceImpl @Inject constructor(
 ) : CatalogRemoteDataSource {
 
     override suspend fun getCatalog(): EResult<CatalogModel> {
-        catalogApi.getCatalog().apply {
-            return if (isSuccessful)
-                body().toSuccessResult()
-            else
-                errorBody()?.errorResult(message()) ?: emptyResult()
+        try {
+            catalogApi.getCatalog().apply {
+                return if (isSuccessful)
+                    body().toSuccessResult()
+                else
+                    errorBody()?.errorResult(message()) ?: emptyResult()
+            }
+        } catch (ex: Exception) {
+            // TODO надо сделать нормальную обработку ошибок + создать внутренние исключения + локализация
+            return errorResult("Какой-то сверхразум все сломал :(", ex)
         }
     }
 

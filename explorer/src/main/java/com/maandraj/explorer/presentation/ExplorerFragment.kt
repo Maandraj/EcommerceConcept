@@ -2,6 +2,8 @@ package com.maandraj.explorer.presentation
 
 import android.content.Context
 import android.view.View
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
@@ -10,14 +12,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import com.maandraj.core.presentation.BaseFragment
+import com.maandraj.core.utils.extension.hide
+import com.maandraj.core.utils.extension.show
 import com.maandraj.core.utils.extension.toast
 import com.maandraj.explorer.R
 import com.maandraj.explorer.databinding.FragmentExplorerBinding
+import com.maandraj.explorer.presentation.adapter.best.bestSellersAdapterDelegate
 import com.maandraj.explorer.presentation.adapter.category.CategoryData
 import com.maandraj.explorer.presentation.adapter.category.categoryAdapterDelegate
-import com.maandraj.explorer.presentation.adapter.store.homeStoreAdapterDelegate
+import com.maandraj.explorer.presentation.adapter.home.homeStoreAdapterDelegate
 import dagger.Lazy
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -35,8 +41,8 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
         factory.get()
     }
     override val layoutId: Int = R.layout.fragment_explorer
-    override val contentViewLayout: View?
-        get() = super.contentViewLayout
+    override val contentViewLayout: View
+        get() = binding.contentLayout
 
     private val binding: FragmentExplorerBinding by viewBinding(FragmentExplorerBinding::bind)
     private var rvPosition = -1
@@ -44,6 +50,7 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
             field = if ((adapterHome.items?.size ?: 0) <= value) -1
             else value
         }
+
     private val adapterCategory = ListDelegationAdapter(
         categoryAdapterDelegate { item, positionScroll ->
             toast(getString(item.nameResId))
@@ -51,11 +58,24 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
                 positionScroll, SCROLL_OFFSET)
         }
     )
+
     private val adapterHome = ListDelegationAdapter(
         homeStoreAdapterDelegate { item ->
             toast(item.title)
         }
     )
+    private val adapterBest = ListDelegationAdapter(
+        bestSellersAdapterDelegate(
+            itemClickedListener = { item ->
+                toast(item.title)
+            },
+            itemClickedFavourite = { isFavourite, item ->
+                toast("${item.title} $isFavourite")
+            }
+        )
+    )
+
+    private var bottomSheetFilter: BottomSheetDialog? = null
 
     override fun onAttach(context: Context) {
         ViewModelProvider(this).get<ExplorerComponentViewModel>().explorerComponent.inject(this)
@@ -80,17 +100,42 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
                     rvPosition = positionIndex / listSize
                 }
             })
+
+            toolbar.ivFilter.setOnClickListener {
+                bottomSheetFilter = BottomSheetDialog(requireContext())
+                bottomSheetFilter?.apply {
+                    setContentView(R.layout.layout_filter_bottom_sheet)
+
+                    findViewById<CardView>(R.id.btn_back_filter)
+                        ?.setOnClickListener { hide() }
+                    findViewById<Button>(R.id.btn_done_filter)
+                        ?.setOnClickListener { hide() }
+                    show()
+                }
+            }
         }
         adapterCategory.items = CategoryData.createListExample()
 
         setAutoScrollHomeStore()
         setObservable()
+        setRefreshLayout()
+    }
+
+    private fun setRefreshLayout() {
+        binding.refreshLayout.setOnRefreshListener {
+            viewModel.getCatalog()
+            onRefresh()
+        }
     }
 
     private fun setObservable() {
         viewModel.catalog.observe(viewLifecycleOwner) {
             adapterHome.items = it.homeStoreData
             binding.rvHomeStore.adapter = adapterHome
+
+            adapterBest.items = it.bestSellerData
+            binding.rvBest.adapter = adapterBest
+
         }
     }
 
@@ -104,6 +149,24 @@ class ExplorerFragment : BaseFragment<ExplorerViewModel>() {
                 }
             }
         }
+    }
+
+    private fun onRefresh() {
+        loadingViewLayout?.hide()
+        errorViewLayout?.hide()
+        contentViewLayout.show()
+        binding.refreshLayout.isRefreshing = false
+    }
+
+    override fun hideLoading() {
+        super.hideLoading()
+        binding.refreshLayout.isRefreshing = false
+    }
+
+    override fun onDestroyView() {
+        bottomSheetFilter?.hide()
+        bottomSheetFilter = null
+        super.onDestroyView()
     }
 }
 

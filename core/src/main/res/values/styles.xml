@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="TextTitleStyle" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textColor">@color/color_second</item>
         <item name="android:fontFamily">@font/mark_pro_bold</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="TextSubTitleStyle" parent="Widget.MaterialComponents.TextView">
-        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textColor">@color/color_second</item>
         <item name="android:fontFamily">@font/mark_pro_normal</item>
         <item name="android:gravity">center_vertical</item>
     </style>
 
     <style name="SpinnerItem" parent="Widget.AppCompat.TextView.SpinnerItem">
-        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textColor">@color/color_second</item>
         <item name="android:fontFamily">@font/mark_pro_normal</item>
     </style>
 
     <style name="SpinnerDropDownItem" parent="Widget.AppCompat.Spinner.DropDown">
-        <item name="android:textColor">@color/text_main_color</item>
+        <item name="android:textColor">@color/color_second</item>
         <item name="android:fontFamily">@font/mark_pro_normal</item>
     </style>
 

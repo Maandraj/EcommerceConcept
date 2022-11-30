@@ -13,7 +13,6 @@ inline fun <reified T : Any> successResult(data: T): EResult<T> = EResult.Succes
 
 fun Any.errorResult(
     message: String = "",
-    code: Int = -1,
     exception: Throwable? = null
 ) = EResult.Failure(message, exception)
 

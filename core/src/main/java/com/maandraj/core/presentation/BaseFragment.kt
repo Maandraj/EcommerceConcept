@@ -40,6 +40,30 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
         toast(message, interval)
     }
 
+    private fun observableState() {
+        viewModel?.errorLiveData?.observe(viewLifecycleOwner) {
+            showLayoutError()
+            toast(it.message.toString())
+        }
+        viewModel?.loadingLiveData?.observe(viewLifecycleOwner) {
+            if (it)
+                showLayoutLoading()
+            else
+                hideLayoutLoading()
+        }
+    }
+
+    override fun showError() {
+        showLayoutError()
+    }
+
+    private fun showLayoutError() {
+        hideKeyboard()
+        contentViewLayout?.hide()
+        loadingViewLayout?.hide()
+        errorViewLayout?.show()
+    }
+
     override fun showLoading() {
         showLayoutLoading()
     }
@@ -47,8 +71,10 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
     private fun showLayoutLoading() {
         hideKeyboard()
         contentViewLayout?.hide()
+        errorViewLayout?.hide()
         loadingViewLayout?.show()
     }
+
 
     override fun hideLoading() {
         hideLayoutLoading()
@@ -57,6 +83,7 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
     private fun hideLayoutLoading() {
         hideKeyboard()
         loadingViewLayout?.hide()
+        errorViewLayout?.hide()
         contentViewLayout?.show()
     }
 
@@ -71,8 +98,8 @@ abstract class BaseFragment<VM : IBaseViewModel> : Fragment(), IBaseFragment<VM>
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initBinding()
+        observableState()
     }
-
 
     override fun onDestroyView() {
         onBackPressedCallback.isEnabled = false

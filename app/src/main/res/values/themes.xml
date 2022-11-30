@@ -16,7 +16,8 @@
         <item name="android:textViewStyle">@style/TextSubTitleStyle</item>
         <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem</item>
         <item name="android:spinnerItemStyle">@style/SpinnerItem</item>
-        <item name="android:windowBackground">@color/color_window_background</item>
+        <item name="android:windowBackground">@color/color_window_background</item>\
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.EcommerceConcept">
@@ -29,5 +30,19 @@
     <style name="ThemeOverlay.App.BottomNavigationView" parent="">
         <item name="colorPrimary">@color/color_second</item>
         <item name="colorOnPrimary">@color/second_element_color</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme"
+        parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle"
+        parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/rounded_bottom_sheet</item>
     </style>
 </resources>

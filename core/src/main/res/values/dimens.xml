@@ -7,4 +7,6 @@
     <dimen name="base_margin">16dp</dimen>
     <dimen name="base_start_margin">16dp</dimen>
     <dimen name="base_end_margin">16dp</dimen>
+
+    <dimen name="corner_radius_buttons">10dp</dimen>
 </resources>

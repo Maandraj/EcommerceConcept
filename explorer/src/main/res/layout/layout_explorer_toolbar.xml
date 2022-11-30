@@ -46,7 +46,7 @@
         app:srcCompat="@drawable/ic_dropdown_arrow_10dp" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/shapeableImageView2"
+        android:id="@+id/iv_filter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"

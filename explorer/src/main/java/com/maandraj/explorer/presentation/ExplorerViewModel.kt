@@ -25,8 +25,10 @@ class ExplorerViewModel @Inject constructor(
     val catalog = _catalog.asLiveData()
 
     fun getCatalog() = viewModelScope.launch {
+        loadingLiveData?.postValue(true)
         catalogUseCase().applyIfSuccess {
             _catalog.postValue(it)
+            loadingLiveData?.postValue(false)
         }.applyIfError {
             errorLiveData.postValue(it)
         }

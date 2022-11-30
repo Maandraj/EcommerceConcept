@@ -6,7 +6,7 @@ import com.maandraj.models.local.catalog.entity.BestSellerEntity
 
 data class BestSellerData(
     val discountPrice: Int,
-    val isFavorites: Boolean,
+    var isFavorites: Boolean,
     val picture: String,
     val priceWithoutDiscount: Int,
     val title: String

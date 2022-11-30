@@ -6,16 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="56dp">
 
-    <com.google.android.material.button.MaterialButton
+    <include
         android:id="@+id/btn_toolbar_back"
+        layout="@layout/layout_back_button"
         android:layout_width="37dp"
         android:layout_height="37dp"
-        android:layout_marginStart="@dimen/size_margin_toolbar_back_button_dp"
-        android:background="@drawable/back_button_37dp"
+        android:layout_marginStart="@dimen/base_start_margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:id="@+id/tv_toolbar_title"
         android:layout_width="0dp"

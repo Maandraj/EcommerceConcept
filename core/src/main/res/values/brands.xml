@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="brand">
+        <item>Samsung</item>
+        <item>Iphone</item>
+        <item>Xiaomi</item>
+        <item>Motorola</item>
+    </string-array>
+</resources>

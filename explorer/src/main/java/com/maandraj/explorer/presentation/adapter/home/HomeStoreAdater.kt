@@ -1,4 +1,4 @@
-package com.maandraj.explorer.presentation.adapter.store
+package com.maandraj.explorer.presentation.adapter.home
 
 import com.bumptech.glide.Glide
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding

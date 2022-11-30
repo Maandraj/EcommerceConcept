@@ -16,6 +16,7 @@ interface IBaseFragment<VM : IBaseViewModel> {
 
     fun hideLoading()
     fun showLoading()
+    fun showError()
 
     fun showToast(message: Any, interval: Int = Toast.LENGTH_SHORT)
 
